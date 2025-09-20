@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Starbucks</title>
+    <link rel="stylesheet" href="contato.css" />
+  </head>
+  <body>
+    <div class="circulo"></div>
+
+    <header>
+      <img src="img/logo.png" alt="Logo Starbucks" class="logo" />
+      <button class="button" data-text="Awesome">
+        <a href="index.html" class="actual-text">&nbsp;INÍCIO&nbsp;</a>
+        <a href="index.html" aria-hidden="true" class="hover-text"
+          >&nbsp;INÍCIO&nbsp;</a
+        >
+      </button>
+    </header>
+
+    <section class="caixa-conteudo">
+      <div class="caixa-textos">
+        <h2>Fale <span class="text-starbucks">Conosco</span></h2>
+        <p>
+          Tem alguma dúvida, sugestão ou quer apenas dizer um oi? Preencha o
+          formulário e retornaremos o mais rápido possível.
+        </p>
+
+        <form class="form-contato">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+          <textarea
+            name="mensagem"
+            placeholder="Sua mensagem"
+            required
+          ></textarea>
+          <button type="submit" class="second-button">Enviar</button>
+        </form>
+      </div>
+
+      <div class="caixa-imagem">
+        <img src="img/img1.png" alt="Copo Starbucks" class="imagem-copo" />
+      </div>
+    </section>
+  </body>
+</html>

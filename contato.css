@@ -1,0 +1,387 @@
+/* Seu estilo base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding-top: 1px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 500px;
+  background-image: url("img/wp3617437.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #37ff8b;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+a {
+  text-decoration: none;
+  color: transparent;
+}
+
+.contato {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contato:hover {
+  color: #017143;
+  transform: scale(1.1);
+}
+
+.caixa-conteudo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 555px;
+}
+
+.caixa-textos {
+  width: 600px;
+}
+
+h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 70px;
+}
+
+p {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.text-starbucks {
+  color: #012416;
+  font-weight: 900;
+}
+
+.second-button {
+  background-color: #017143;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: 0.5s ease;
+}
+
+.second-button:hover {
+  background-color: #00b368;
+  padding: 15px 25px;
+}
+
+.logo {
+  margin-top: 60px;
+  width: 80px;
+  animation: fadeUp 0.8s ease-out forwards, flutuar 4s ease-in-out infinite;
+  animation-delay: 0s, 0.8s; /* fadeUp começa imediatamente, flutuar só depois */
+}
+
+.caixa-imagem {
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 200px;
+}
+
+.imagem-copo {
+  width: 340px;
+  animation: fadeUp 0.8s ease-out forwards, flutuar 4s ease-in-out infinite;
+  animation-delay: 0s, 0.8s; /* fadeUp começa imediatamente, flutuar só depois */
+}
+
+.circulo {
+  background-color: #017143;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: circle(600px at right 800px);
+  z-index: -1;
+}
+
+@keyframes flutuar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* 🎯 Estilo do formulário */
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.form-contato textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* Animação de entrada suave */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica a todos os elementos visíveis */
+body * {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Efeito em cascata */
+body *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+body *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+body *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+body *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+body *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+body *:nth-child(6) {
+  animation-delay: 0.6s;
+}
+body *:nth-child(7) {
+  animation-delay: 0.7s;
+}
+body *:nth-child(8) {
+  animation-delay: 0.8s;
+}
+body *:nth-child(9) {
+  animation-delay: 0.9s;
+}
+body *:nth-child(10) {
+  animation-delay: 1s;
+}
+
+/* Tablet (até 1024px) */
+@media (max-width: 1024px) {
+  .circulo {
+    display: none;
+  }
+
+  /* Fundo verde escuro gradiente animado */
+  body {
+    padding-top: 1px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 500px;
+    background: linear-gradient(-45deg, #013220, #025939, #017143, #025939);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    overflow: scroll;
+    min-height: 130vh; /* cobre toda a tela */
+  }
+
+  /* Animação do gradiente */
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  .caixa-conteudo {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .caixa-textos {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .caixa-imagem {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .imagem-copo {
+    width: 280px;
+  }
+
+  .logo {
+    margin-top: 20px;
+    width: 70px;
+  }
+}
+
+/* Celular (até 768px) */
+@media (max-width: 768px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 150px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .second-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .caixa-conteudo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .caixa-textos {
+    width: 100%;
+  }
+
+  .caixa-imagem {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .imagem-copo {
+    width: 220px;
+  }
+
+  .caixa-menu {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .botao-menu {
+    width: 60px;
+    padding-top: 10px;
+  }
+
+  .circulo {
+    clip-path: circle(400px at center);
+  }
+}
+
+/* Celular pequeno (até 480px) */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .imagem-copo {
+    width: 180px;
+  }
+
+  .botao-menu {
+    width: 50px;
+  }
+
+  .second-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
